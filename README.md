@@ -1,13 +1,12 @@
 # DevOps Simulator
 
 A comprehensive CI/CD configuration management tool for enterprise deployments.
-
+git status
 ## Project Status
 - **Version**: 1.0.1 (Production), 2.1.0-alpha (Development)
 - **Environments**: Production & Development
 - **Student**: Shaik Umar
-- **Student ID**: 23P31A0560
-
+- **Student ID**: 23A91A0560
 ## Features
 
 ### Core Features

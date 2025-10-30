@@ -3,10 +3,10 @@
 A comprehensive CI/CD configuration management tool for enterprise deployments.
 
 ## Project Status
-- **Version**: 1.0.0 (Production), 2.0.0-beta (Development)
+- **Version**: 1.0.1 (Production), 2.1.0-alpha (Development)
 - **Environments**: Production & Development
 - **Student**: Shaik Umar
-- **Student ID**: 23A91A0560
+- **Student ID**: 23P31A0560
 
 ## Features
 
@@ -23,11 +23,17 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 - Scheduled backups
 
 ### Development Features (Beta)
--  Docker Compose integration
--  Hot reload enabled
--  Debug mode active
--  Enhanced logging
--  Mock external APIs
+- Docker Compose integration
+- Hot reload enabled
+- Debug mode active
+- Enhanced logging
+- Mock external APIs
+
+### Experimental / Conflict-Simulator Features
+> Note: These features are experimental and not production-ready. Use with caution.
+- Feature flags for new modules
+- Simulated deployment environments
+- Advanced monitoring metrics
 
 ## Quick Start
 
@@ -35,3 +41,5 @@ A comprehensive CI/CD configuration management tool for enterprise deployments.
 ```bash
 export DEPLOY_ENV=production
 ./scripts/deploy.sh
+## FAQ
+update

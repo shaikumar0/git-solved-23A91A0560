@@ -15,19 +15,50 @@
   },
   "development": {
     "connection": {
-      "host": "localhost",
+      "type": "distributed",
+      "hosts": [
+        "localhost",
+        "node1.example.com",
+        "node2.example.com",
+        "node3.example.com"
+      ],
       "port": 5432,
       "database": "devops_development",
+      "username": "dev_admin",
       "ssl_mode": "disable",
-      "pool_size": 5
+      "pool_size": 5,
+      "timeout": 60,
+      "connection_pooling": "pgbouncer",
+      "read_replicas": 1
     },
     "backup": {
       "enabled": false,
-      "schedule": "manual"
+      "schedule": "manual",
+      "strategy": "continuous",
+      "retention_days": 90,
+      "location": "s3://backups/dev",
+      "encryption": true,
+      "geo_redundancy": false
     },
     "features": {
       "seed_data": true,
-      "debug_queries": true
+      "debug_queries": true,
+      "mock_apis": true,
+      "debug_mode": true,
+      "ai_optimization": true,
+      "monitoring_metrics": true
+    },
+    "replication": {
+      "enabled": true,
+      "replicas": 1,
+      "sync_mode": "semi-synchronous",
+      "multi_region": false,
+      "regions": ["local"]
+    },
+    "logging": {
+      "level": "DEBUG",
+      "format": "pretty",
+      "alert_on_anomaly": true
     }
   }
 }

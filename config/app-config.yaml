@@ -1,21 +1,33 @@
 application:
   name: DevOpsSimulator
-  version: 1.0.0
+  version: 1.0.0        # Production version
   environment: production
-  
+
 server:
   host: 0.0.0.0
   port: 8080
   ssl_enabled: true
-  
+
 logging:
   level: INFO
   format: json
-  
-# Development configuration (enabled via environment variable)
-development:
-  enabled: false
-  port: 3000
-  hot_reload: false
-  debug_mode: false
-  mock_apis: false
+
+# Development / Beta Settings (Optional)
+# Uncomment or switch environment to use development features
+# application:
+#   version: 2.0.0-beta
+#   environment: development
+#
+# server:
+#   host: localhost
+#   port: 3000
+#   ssl_enabled: false
+#   hot_reload: true
+#
+# logging:
+#   level: DEBUG
+#   format: pretty
+#
+# development:
+#   mock_apis: true
+#   debug_mode: true
